@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --paper: #f2f3e9;
+  --ink: #18221d;
+  --deep: #304b3b;
+  --muted: #798177;
+  --line: #d9ddd1;
+  --lime: #c4f06f;
+  --lime-strong: #93bd4c;
+  --lime-soft: #e5edcf;
+  --coral: #d76c55;
+  --display: 'Barlow Condensed', Impact, sans-serif;
+  --body: 'Noto Sans Devanagari', 'Noto Sans Kannada', 'Noto Sans Telugu', 'Noto Sans Tamil', 'Noto Sans Malayalam', 'Manrope', 'Segoe UI', sans-serif;
+  --mono: 'DM Mono', Consolas, monospace;
+
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+body { min-width: 320px; min-height: 100vh; margin: 0; background: radial-gradient(ellipse at 78% 7%, rgba(203, 217, 170, 0.28), transparent 34%), repeating-linear-gradient(90deg, transparent 0 79px, rgba(68, 89, 66, 0.025) 80px 81px), var(--paper); }
+button { font: inherit; }
+button:disabled { cursor: not-allowed; }
+#root { min-height: 100vh; }
+::selection { color: var(--ink); background: var(--lime); }

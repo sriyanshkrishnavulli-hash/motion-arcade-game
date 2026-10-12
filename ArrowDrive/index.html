@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080914" />
+    <meta name="description" content="A neon space-road driving game steered by a directional arrow." />
+    <title>Arrow Drive</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./game.js"></script>
+  </head>
+  <body>
+    <main class="arcade">
+      <header class="topbar">
+        <a class="wordmark" href="./" aria-label="Arrow Drive home">
+          <span class="wordmark-icon" aria-hidden="true">↗</span>
+          <span>ARROW<span class="wordmark-light"> DRIVE</span></span>
+        </a>
+        <span class="edition">COSMIC HIGHWAY / 001</span>
+        <div class="top-score" aria-live="polite">
+          <span>DISTANCE</span>
+          <strong id="score">00000</strong>
+        </div>
+      </header>
+
+      <section class="intro" aria-labelledby="title">
+        <div>
+          <p class="eyebrow"><span></span> FIND YOUR LINE</p>
+          <h1 id="title">Follow the <em>arrow.</em></h1>
+          <p class="subtitle">Point left or right. Your car follows. Dodge the traffic and keep the drive alive.</p>
+        </div>
+        <div class="status-card" aria-live="polite">
+          <span class="status-dot"></span>
+          <span id="status">READY TO DRIVE</span>
+        </div>
+      </section>
+
+      <section class="camera-card" aria-label="Green arrow camera controls">
+        <div class="camera-preview" id="camera-preview">
+          <video id="camera" playsinline muted></video>
+          <div class="camera-empty" id="camera-empty"><span aria-hidden="true">◉</span><small>CAMERA OFF</small></div>
+          <span class="camera-corner corner-tl"></span>
+          <span class="camera-corner corner-br"></span>
+          <span class="detect-badge" id="detect-badge">SEARCHING</span>
+        </div>
+        <div class="camera-copy">
+          <p class="eyebrow"><span></span> LIVE CAMERA TRACKING</p>
+          <h2>Show a green arrow</h2>
+          <p>Hold a bright green arrow horizontally in view. Point it left or right and the car will follow.</p>
+          <p class="camera-status" id="camera-status" aria-live="polite">Camera is off. Allow camera access when prompted.</p>
+        </div>
+        <button class="camera-button" id="camera-button" type="button">ENABLE CAMERA <span aria-hidden="true">→</span></button>
+      </section>
+
+      <section class="game-panel" aria-label="Arrow Drive game">
+        <div class="game-bar">
+          <span><i class="live-dot"></i> NEON HIGHWAY <span class="camera-live-label" id="camera-live-label">/ CAMERA STEERING</span></span>
+          <span class="key-hint"><kbd>←</kbd><kbd>→</kbd> KEYBOARD BACKUP</span>
+        </div>
+        <div class="game-wrap">
+          <canvas id="game" aria-label="Three-lane road game. The car follows the direction of the real green arrow shown to the camera."></canvas>
+          <div class="game-overlay" id="overlay">
+            <div class="overlay-card">
+              <span class="overlay-mark" aria-hidden="true">↔</span>
+              <p class="eyebrow">CAMERA-STEERED DRIVE</p>
+              <h2 id="overlay-title">Ready, driver?</h2>
+              <p id="overlay-copy">Show a green arrow to your camera. Point it left or right and the car will follow. Allow camera access to start.</p>
+              <button id="start-button" type="button">START DRIVING <span aria-hidden="true">→</span></button>
+              <small>ARROW KEYS OR A / D <b>·</b> ENTER TO START</small>
+            </div>
+          </div>
+        </div>
+        <footer class="game-footer">
+          <span><i class="footer-star">✦</i> Keep moving. Keep looking ahead.</span>
+          <span>← LEFT <b>/</b> RIGHT →</span>
+        </footer>
+      </section>
+
+      <section class="instructions" aria-label="How to play">
+        <div><span class="step">01</span><p><strong>Point the arrow</strong><br />Tap left or right to choose a lane.</p></div>
+        <div><span class="step">02</span><p><strong>Your car follows</strong><br />The car turns in the arrow's direction.</p></div>
+        <div><span class="step">03</span><p><strong>Avoid traffic</strong><br />Stay on the road and build your distance.</p></div>
+      </section>
+      <footer class="page-footer">ARROW DRIVE <span>—</span> MADE FOR THE OPEN ROAD</footer>
+    </main>
+  </body>
+</html>
